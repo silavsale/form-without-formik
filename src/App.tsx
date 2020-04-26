@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App: React.FC = () => {
+
+const handleSubmit =( e: any) => {
+
+}
+
+  return(
+    <div className='App'>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label  htmlFor="email">Email:</label>
+          <input autoComplete="off" type="text" name='email'/>
+        </div>
+        <div>
+          <label htmlFor="password">Password:</label>
+          <input  autoComplete="off" type="text" name='password'/>
+        </div>
+        <button type='submit'>Submit</button>
+        <button>Reset</button>
+      </form>
     </div>
-  );
+  )
 }
 
 export default App;
